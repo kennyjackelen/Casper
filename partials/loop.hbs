@@ -6,6 +6,11 @@
 {{!-- This is the post loop - each post will be output using this markup --}}
 {{#foreach posts}}
 <article class="{{post_class}} {{#link}}link-post{{/link}}">
+    {{#if image}}
+    <a href="{{#link}}{{theLink}}{{else}}{{url}}{{/link}}">
+        <img src="{{image}}" style="width: 33%; float: left; margin-right: 1em;">
+    </a>
+    {{/if}}
     <header class="post-header">
         <h2 class="post-title"><a href="{{#link}}{{theLink}}{{else}}{{url}}{{/link}}">{{title}}</a></h2>
     </header>
