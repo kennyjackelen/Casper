@@ -7,12 +7,12 @@
 {{#foreach posts}}
 <article class="{{post_class}} {{#link}}link-post{{/link}}">
     {{#if image}}
-    <a href="{{#link}}{{theLink}}{{else}}{{url}}{{/link}}">
+    <a href="{{#link}}{{theLink}}{{else}}{{url}}{{/link}}" rel="noopener" target="_blank">
         <img src="{{image}}" style="width: 33%; float: left; margin-right: 1em;">
     </a>
     {{/if}}
     <header class="post-header">
-        <h2 class="post-title"><a href="{{#link}}{{theLink}}{{else}}{{url}}{{/link}}">{{title}}</a></h2>
+        <h2 class="post-title"><a href="{{#link}}{{theLink}}{{else}}{{url}}{{/link}}" {{#link}}rel="noopener" target="_blank"{{/link}}>{{title}}</a></h2>
     </header>
     <section class="post-excerpt">
         <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
